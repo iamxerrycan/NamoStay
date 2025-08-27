@@ -6,3 +6,18 @@
 .btn {
   @apply px-6 py-3 rounded-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition;
 }
+
+
+html, body {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+html {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;    
+}
