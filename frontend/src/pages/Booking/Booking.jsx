@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 export default function Booking({ room, closeModal }) {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    date: "",
+    name: '',
+    email: '',
+    date: '',
     rooms: 1,
-    message: "",
+    message: '',
   });
 
   useEffect(() => {
@@ -27,19 +27,22 @@ export default function Booking({ room, closeModal }) {
     alert(
       `Thank you ${formData.name}, your booking request for ${room.title} has been received!`
     );
-    setFormData({ name: "", email: "", date: "", rooms: 1, message: "" });
+    setFormData({ name: '', email: '', date: '', rooms: 1, message: '' });
     closeModal();
   };
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-4">
+      <p className="text-sm text-red-500">
+        Work in progress please contact us via email/whatsapp/instagram or phone
+        instead
+      </p>
       <input
         type="text"
         name="name"
         placeholder="Full Name"
         value={formData.name}
         onChange={handleChange}
-        required
         className="p-3 border rounded-lg w-full"
       />
       <input
@@ -48,7 +51,6 @@ export default function Booking({ room, closeModal }) {
         placeholder="Email Address"
         value={formData.email}
         onChange={handleChange}
-        required
         className="p-3 border rounded-lg w-full"
       />
       <input
@@ -56,7 +58,6 @@ export default function Booking({ room, closeModal }) {
         name="date"
         value={formData.date}
         onChange={handleChange}
-        required
         className="p-3 border rounded-lg w-full"
       />
       <input
@@ -65,7 +66,6 @@ export default function Booking({ room, closeModal }) {
         min="1"
         value={formData.rooms}
         onChange={handleChange}
-        required
         className="p-3 border rounded-lg w-full"
         placeholder="Number of Rooms"
       />

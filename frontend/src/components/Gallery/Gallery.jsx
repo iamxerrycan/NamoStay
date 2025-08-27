@@ -1,24 +1,55 @@
 import React from "react";
 
 const images = [
-  "https://source.unsplash.com/400x300/?hotel,room",
-  "https://source.unsplash.com/400x300/?bodhgaya,temple",
-  "https://source.unsplash.com/400x300/?hotel,lobby",
-  "https://source.unsplash.com/400x300/?bodhgaya,monastery",
-  "https://source.unsplash.com/400x300/?hotel,pool",
-  "https://source.unsplash.com/400x300/?buddha,temple",
+  {
+    src: "/maintemp.jpg",
+    desc: "Peaceful temple near Bodh Gaya",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80",
+    desc: "Calm meditation hall",
+  },
+  {
+    src: "/loby.jpg",
+    desc: "Welcoming home lobby",
+  },
+  {
+    src: "/food.jpg",
+    desc: "Homemade traditional meals",
+  },
+  {
+    src: "/terrace.jpg",
+    desc: "Open terrace with peaceful views",
+  },
+  {
+    src: "/bath.jpg",
+    desc: "Clean and simple bathroom",
+  },
 ];
 
 export default function Gallery() {
   return (
     <section id="gallery" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold mb-12">Gallery</h2>
+        <h2 className="text-3xl font-bold mb-12 text-gray-800">Gallery</h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-          {images.map((img, index) => (
-            <div key={index} className="overflow-hidden rounded-xl shadow-md hover:scale-105 transform transition">
-              <img src={img} alt={`Gallery ${index + 1}`} className="w-full h-48 object-cover"/>
+          {images.map((item, index) => (
+            <div
+              key={index}
+              className="group overflow-hidden rounded-2xl shadow-lg cursor-pointer relative"
+            >
+              <img
+                src={item.src}
+                alt={`Gallery ${index + 1}`}
+                className="w-full h-56 object-cover transform group-hover:scale-110 transition duration-500 ease-in-out"
+              />
+              {/* overlay with description */}
+              <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center px-3">
+                <span className="text-white text-sm sm:text-base font-medium">
+                  {item.desc}
+                </span>
+              </div>
             </div>
           ))}
         </div>

@@ -11,7 +11,7 @@ import {
 const amenities = [
   { icon: <Wifi className="w-8 h-8 text-blue-500" />, title: 'Free Wi-Fi' },
   { icon: <Flower2 className="w-8 h-8 text-pink-500" />, title: 'Wellness' },
-  { icon: <Waves className="w-8 h-8 text-teal-500" />, title: 'Swimming Pool' },
+  { icon: <Waves className="w-8 h-8 text-teal-500" />, title: 'open terrace' },
   {
     icon: <UtensilsCrossed className="w-8 h-8 text-green-500" />,
     title: 'Food',

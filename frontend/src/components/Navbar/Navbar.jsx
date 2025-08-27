@@ -39,12 +39,15 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full top-0 left-0 z-50 bg-white/80 backdrop-blur-md shadow-lg transition-all duration-300">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-        <h1
-          className="text-2xl font-bold text-indigo-900 cursor-pointer hover:text-indigo-700 transition"
-          onClick={() => handleScroll('hero')}
-        >
-          NamoStay
-        </h1>
+        <img
+          src="/mainlogo.png"
+          alt="NamoStay Logo"
+          className="h-12 w-auto cursor-pointer 
+             hover:scale-105 hover:brightness-110 
+             transition-transform duration-300 ease-in-out 
+             drop-shadow-md rounded-full"
+          onClick={() => handleScroll('home')}
+        />
 
         {/* Desktop Links */}
         <ul className="hidden md:flex space-x-8 font-medium text-gray-700">

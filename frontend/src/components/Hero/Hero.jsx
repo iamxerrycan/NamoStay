@@ -1,6 +1,16 @@
 import React from 'react';
 
 const Home = () => {
+
+
+  const handleBook = () => {
+    const section = document.getElementById('contact');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+
   return (
     <section
       id="home"
@@ -19,9 +29,9 @@ const Home = () => {
           Welcome to Namo Stay
         </h1>
         <p className="text-base sm:text-lg md:text-xl mb-6 break-words">
-          Experience free and comfort at the heart of the city
+          Experience freedom and comfort at the heart of the city
         </p>
-        <button className="px-6 py-3 bg-yellow-500 text-black rounded-lg font-semibold hover:bg-yellow-400 transition w-auto sm:w-auto">
+        <button onClick={handleBook} className="px-6 py-3 bg-yellow-500 text-black rounded-lg font-semibold hover:bg-yellow-400 transition w-auto sm:w-auto">
           Book Now
         </button>
       </div>

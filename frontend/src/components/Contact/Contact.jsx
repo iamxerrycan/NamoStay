@@ -42,7 +42,6 @@ export default function Contact() {
                 placeholder="Full Name"
                 value={formData.name}
                 onChange={handleChange}
-                required
                 className="p-4 border border-gray-200 rounded-xl w-full focus:ring-2 focus:ring-indigo-500 focus:outline-none transition"
               />
               <input
@@ -51,7 +50,6 @@ export default function Contact() {
                 placeholder="Email Address"
                 value={formData.email}
                 onChange={handleChange}
-                required
                 className="p-4 border border-gray-200 rounded-xl w-full focus:ring-2 focus:ring-indigo-500 focus:outline-none transition"
               />
             </div>
@@ -60,7 +58,6 @@ export default function Contact() {
               placeholder="Your Message"
               value={formData.message}
               onChange={handleChange}
-              required
               className="p-4 border border-gray-200 rounded-xl w-full h-32 resize-none focus:ring-2 focus:ring-indigo-500 focus:outline-none transition"
             ></textarea>
             <button
@@ -89,7 +86,7 @@ export default function Contact() {
           <div className="w-full flex-1 p-6">
             <iframe
               title="NamoStay Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.0921800222096!2d84.99135381543132!3d24.695005984136667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398d7a89c7c59b03%3A0x5c6b2a0c2f2aee6e!2sBodhgaya!5e0!3m2!1sen!2sin!4v1693132800000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.050435664558!2d84.99149720000001!3d24.690792899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32d007aeada53%3A0xde84dcc14691fc68!2sUrail%20Panchayat%20bhavan!5e0!3m2!1sen!2sin!4v1756326140607!5m2!1sen!2sin"
               className="w-full h-full border-0"
               allowFullScreen=""
               loading="lazy"

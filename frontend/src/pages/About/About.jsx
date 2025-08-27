@@ -7,7 +7,7 @@ const About = () => {
         {/* Left Side - Image */}
         <div className="lg:w-1/2">
           <img
-            src="https://images.unsplash.com/photo-1501117716987-c8e2aeea32d0?auto=format&fit=crop&w=800&q=80"
+            src="/mainlogo.png"
             alt="About NamoStay"
             className="rounded-2xl shadow-lg"
           />

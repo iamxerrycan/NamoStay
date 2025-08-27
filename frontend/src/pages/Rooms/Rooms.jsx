@@ -1,24 +1,24 @@
-import React, { useState } from "react";
-import Booking from "../Booking/Booking";
+import React, { useState } from 'react';
+import Booking from '../Booking/Booking';
 
 const rooms = [
   {
-    title: "Luxury Room",
-    price: "₹6,999 / night",
-    img: "https://source.unsplash.com/400x250/?hotel,room,luxury",
-    desc: "Spacious room with king-size bed, balcony, and premium amenities.",
+    title: 'Basic Room',
+    price: '₹299 / night',
+    img: 'home1.jpeg',
+    desc: 'Clean and simple room with a comfortable single bed, fan, and homely vibes.',
   },
   {
-    title: "Deluxe Room",
-    price: "₹4,999 / night",
-    img: "https://source.unsplash.com/400x250/?hotel,deluxe,room",
-    desc: "Cozy deluxe room with modern interiors and great view.",
+    title: 'Comfort Room',
+    price: '₹399 / night',
+    img: 'home2.jpeg',
+    desc: 'Medium-sized room with double bed, attached washroom, and peaceful environment.',
   },
   {
-    title: "Suite Room",
-    price: "₹8,999 / night",
-    img: "https://source.unsplash.com/400x250/?hotel,suite,room",
-    desc: "Luxurious suite with private living area, bathtub, and 24/7 service.",
+    title: 'Family Room',
+    price: '₹499 / night',
+    img: '/home3.jpeg',
+    desc: 'Spacious room for family with extra bedding, homely food, and comfort of home.',
   },
 ];
 
@@ -52,7 +52,9 @@ export default function Rooms() {
                 className="w-full h-56 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800">{room.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-800">
+                  {room.title}
+                </h3>
                 <p className="text-gray-600 mt-2">{room.desc}</p>
                 <p className="text-indigo-900 font-bold mt-3">{room.price}</p>
                 <button
@@ -70,9 +72,9 @@ export default function Rooms() {
       {/* Booking Modal */}
       {isBookingOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-2xl w-full max-w-2xl p-6 relative">
+          <div className="bg-white rounded-2xl w-80 h-85 max-w-2xl p-6 relative">
             <button
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold"
+              className="absolute top-4 right-4 text-red-500 hover:text-gray-800 text-2xl font-bold"
               onClick={closeBookingModal}
             >
               &times;
