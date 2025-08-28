@@ -19,18 +19,28 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div className="flex flex-col justify-center space-y-3">
-          <div className="flex items-center justify-center md:justify-start space-x-2">
+          {/* Phone */}
+          <a href="tel:+919876543210" className="flex items-center justify-center md:justify-start space-x-2 hover:text-white">
             <Phone className="w-5 h-5 text-indigo-500" />
             <span>+91 98765 43210</span>
-          </div>
-          <div className="flex items-center justify-center md:justify-start space-x-2">
+          </a>
+
+          {/* Email */}
+          <a href="mailto:contact@namostay.com" className="flex items-center justify-center md:justify-start space-x-2 hover:text-white">
             <Mail className="w-5 h-5 text-indigo-500" />
             <span>contact@namostay.com</span>
-          </div>
-          <div className="flex items-center justify-center md:justify-start space-x-2">
+          </a>
+
+          {/* WhatsApp */}
+          <a
+            href="https://wa.me/919876543210"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center md:justify-start space-x-2 hover:text-white"
+          >
             <MessageCircle className="w-5 h-5 text-green-500" />
             <span>+91 98765 43210 (WhatsApp)</span>
-          </div>
+          </a>
         </div>
       </div>
 
