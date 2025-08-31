@@ -4,7 +4,7 @@ import PaymentOptions from '../../components/Payment/PaymentOptions';
 
 export default function MapAndPayment() {
   return (
-    <section className="bg-gray-50 py-20">
+    <section className="bg-gray-50 py-10">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Title */}
         {/* <h2 className="text-3xl text-center font-bold mb-12 text-gray-800">

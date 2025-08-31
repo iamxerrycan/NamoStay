@@ -22,7 +22,7 @@ const amenities = [
 
 export default function Amenities() {
   return (
-    <section id="amenities" className="py-16 bg-white">
+    <section id="amenities" className="py-10 bg-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
          <h2 className="text-3xl md:text-3xl font-bold text-center mb-12 text-gray-800">
         Amenities At <span className="text-blue-900">NamoStay</span>

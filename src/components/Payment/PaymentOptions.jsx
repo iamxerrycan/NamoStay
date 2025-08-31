@@ -1,12 +1,13 @@
 import React from 'react';
-import { Wallet, CreditCard, Banknote } from 'lucide-react';
+import { Wallet, CreditCard, Banknote, Globe } from 'lucide-react'; // Globe for PayPal
 import { motion } from 'framer-motion';
 
 export default function PaymentOptions() {
   const options = [
     { Icon: Wallet, text: 'Cash on Arrival' },
     { Icon: CreditCard, text: 'UPI (Google Pay, PhonePe, Paytm)' },
-    { Icon: Banknote, text: 'Bank Transfer (for foreign guests)' },
+    { Icon: Banknote, text: 'Bank Transfer' },
+    { Icon: Globe, text: 'PayPal (for international guests)' }, // New option
   ];
 
   return (
