@@ -10,6 +10,7 @@ import Gallery from './components/Gallery/Gallery';
 import Booking from './pages/Booking/Booking';
 import Footer from './components/Footer/Footer';
 import Contact from './components/Contact/Contact';
+import MapAndPayment from './pages/Mapandpayment/MapAndPayment';
 
 function App() {
   return (
@@ -23,7 +24,9 @@ function App() {
       <Gallery />
       {/* <Booking /> */}
       <Contact />
+       <MapAndPayment />
       <Footer />
+     
     </>
   );
 }

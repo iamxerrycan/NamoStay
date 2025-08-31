@@ -24,7 +24,9 @@ export default function Amenities() {
   return (
     <section id="amenities" className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold mb-12">Amenities</h2>
+         <h2 className="text-3xl md:text-3xl font-bold text-center mb-12 text-gray-800">
+        Amenities At <span className="text-blue-900">NamoStay</span>
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
           {amenities.map((item, index) => (
             <div

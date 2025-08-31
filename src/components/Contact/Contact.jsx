@@ -1,97 +1,97 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
+import { Phone, Mail, MessageCircle } from 'lucide-react';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Thank you ${formData.name}, your message has been sent!`);
-    setFormData({ name: '', email: '', message: '' });
-  };
-
   return (
     <section
       id="contact"
       className="py-20 bg-gradient-to-b from-white to-gray-50"
     >
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-stretch">
-        {/* Contact Form */}
+      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-stretch">
+        
+        {/* Left Box: Booking Info */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="bg-white p-10 rounded-3xl shadow-2xl border border-gray-100 flex flex-col"
         >
-          <h2 className="text-4xl font-extrabold mb-8 text-black align-center text-center md:text-left">
-            Get in Touch
+          <h2 className="text-4xl font-extrabold mb-6 text-indigo-900 text-center md:text-left">
+            Book Your Stay Directly
           </h2>
-          <form onSubmit={handleSubmit} className="space-y-6 flex-1">
-            <div className="grid md:grid-cols-2 gap-6">
-              <input
-                type="text"
-                name="name"
-                placeholder="Full Name"
-                value={formData.name}
-                onChange={handleChange}
-                className="p-4 border border-gray-200 rounded-xl w-full focus:ring-2 focus:ring-indigo-500 focus:outline-none transition"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email Address"
-                value={formData.email}
-                onChange={handleChange}
-                className="p-4 border border-gray-200 rounded-xl w-full focus:ring-2 focus:ring-indigo-500 focus:outline-none transition"
-              />
-            </div>
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              value={formData.message}
-              onChange={handleChange}
-              className="p-4 border border-gray-200 rounded-xl w-full h-32 resize-none focus:ring-2 focus:ring-indigo-500 focus:outline-none transition"
-            ></textarea>
-            <button
-              type="submit"
-              className="mt-4 w-full bg-gradient-to-r from-indigo-900 to-indigo-800 text-white py-3 rounded-2xl hover:from-indigo-700 hover:to-indigo-600 transition-all shadow-lg"
-            >
-              Send Message
-            </button>
-          </form>
+
+          <p className="text-gray-700 mb-6 leading-relaxed text-lg">
+            Welcome to{' '}
+            <span className="font-semibold text-indigo-800">NamoStay</span> –  
+            a <strong>peaceful</strong> and <strong>budget-friendly</strong> stay in Bodhgaya.  
+            <br />
+            This is not a luxury hotel, but a <strong>homely space</strong> where you’ll be treated like family.  
+            <br />
+            We provide{' '}
+            <strong>
+              clean rooms, fan, healthy home-cooked meals, clean washrooms, and an open terrace
+            </strong>.  
+          </p>
+
+          <p className="text-gray-600 mb-8 text-base">
+            ✨ Guests from{' '}
+            <strong>
+              Vietnam, Japan, Bhutan, Thailand, Malaysia, UK, US
+            </strong>{' '}
+            and many more have already stayed here and felt at home.  
+            <br /> <br />
+            💰 <strong>Lowest price in Bodhgaya</strong>  
+            • 🪷 Calm & peaceful atmosphere  
+            • 👀 Visit first, then decide to stay  
+            <br /> <br />
+            🏡 You’re not just booking a room – you’re joining a family.  
+            <br />
+            🙏 We believe in <strong>trust, care, and warmth</strong>, ensuring your stay feels safe and welcoming.  
+            <br />
+            💬 Many guests return not only for comfort, but for the{' '}
+            <strong>genuine hospitality & friendships</strong> they build here.  
+          </p>
         </motion.div>
 
-        {/* Location Map */}
+        {/* Right Box: Contact Buttons */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="rounded-3xl overflow-hidden shadow-2xl border border-gray-100 flex flex-col"
+          className="bg-gradient-to-br from-indigo-900 to-indigo-700 p-10 rounded-3xl shadow-2xl flex flex-col justify-center items-center text-center"
         >
-          <h2 className="text-4xl font-extrabold mb-4 text-black text-center md:text-left p-6">
-            Our Location
-          </h2>
-          <p className="text-gray-600 mb-6 text-center md:text-left px-6">
-            Find NamoStay in the heart of Bodhgaya. Easy access to temples,
-            local markets, and transport.
+          <h3 className="text-3xl font-bold text-white mb-6">
+            Connect with Us
+          </h3>
+          <p className="text-indigo-100 mb-8 text-lg max-w-md">
+            Booking is simple and direct – contact us via WhatsApp, Email, or a quick Call.  
+            We’ll assist you personally with every detail.  
           </p>
-          <div className="w-full flex-1 p-6">
-            <iframe
-              title="NamoStay Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.050435664558!2d84.99149720000001!3d24.690792899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32d007aeada53%3A0xde84dcc14691fc68!2sUrail%20Panchayat%20bhavan!5e0!3m2!1sen!2sin!4v1756326140607!5m2!1sen!2sin"
-              className="w-full h-full border-0"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+
+          <div className="w-full space-y-4">
+            <a
+              href="https://wa.me/919876543210"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-3 bg-green-600 hover:bg-green-500 text-white py-4 rounded-2xl shadow-lg transition-all text-lg font-semibold w-full"
+            >
+              <MessageCircle className="w-5 h-5" /> Book via WhatsApp
+            </a>
+
+            <a
+              href="mailto:namostay@example.com"
+              className="flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-500 text-white py-4 rounded-2xl shadow-lg transition-all text-lg font-semibold w-full"
+            >
+              <Mail className="w-5 h-5" /> Book via Email
+            </a>
+
+            <a
+              href="tel:+919876543210"
+              className="flex items-center justify-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white py-4 rounded-2xl shadow-lg transition-all text-lg font-semibold w-full"
+            >
+              <Phone className="w-5 h-5" /> Call Now
+            </a>
           </div>
         </motion.div>
       </div>

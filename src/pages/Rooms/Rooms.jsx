@@ -39,7 +39,9 @@ export default function Rooms() {
   return (
     <section id="rooms" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold mb-10 text-gray-800">Our Rooms</h2>
+          <h2 className="text-3xl md:text-3xl font-bold text-center mb-12 text-gray-800">
+          Our <span className="text-blue-900">Rooms</span>
+        </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {rooms.map((room, index) => (
             <div
